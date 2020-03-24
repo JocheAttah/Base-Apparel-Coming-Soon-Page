@@ -1,0 +1,85 @@
+.header{
+
+    &__input-box{
+        width: 44rem;
+        position: relative;
+
+
+        @include respond(tab-port){
+            @include absCenter(250%);
+            width: 68rem;
+
+        }
+        
+        @include respond(phone){
+            @include absCenter(210%);
+            width: 52rem;
+        }
+
+        @include respond(small-phone){
+            @include absCenter(175%);
+            width: 44rem;
+
+        }
+        
+    }
+
+    &__input{
+        background-color: transparent;
+        color: $color-secondary;
+        padding: 2rem 2.2rem;
+        border-radius: 4rem;
+        width: 100%;
+        border: none;
+        border: .5px solid $color-secondary;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+        }
+
+        &:focus:invalid {
+            border: 2px solid $color-warning;
+        }        
+
+        &::-webkit-input-placeholder {
+            color: $color-secondary;
+        }
+
+        
+        
+    }
+
+
+
+    &__label{
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 2rem 2rem;
+        color: $color-warning;
+        transition: (all .3s);
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    &__input:not(:placeholder-shown) {
+        color: $color-darkNeutral;
+        font-weight: 600;
+    }
+
+    &__error{
+        position: absolute;
+        top: 1.8rem;
+        left: 34rem;  
+        transition: (all .3s);
+    }
+
+    &__input:placeholder-shown + &__label + &__error {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,52 @@
+.btn{
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        padding: 1.35rem 4rem;
+        font-size: 3rem;
+        // display: inline;
+        border-radius: 4rem;
+        position: absolute;
+        top: 0;
+        left: 38rem;   
+        
+        transition: all .2s;
+        cursor: pointer;
+
+
+        @include respond(tab-port){
+            left: 60rem;
+        }
+
+        @include respond(phone){
+            left: 43rem;
+        }
+
+        @include respond(small-phone){
+            left: 35rem;
+        }
+    }
+
+    &:hover{
+        background-color: red;
+        transform: scale(1.2);
+
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+    }
+
+    &--email{
+        background-image: $gradient-color;
+        color: $color-white;
+
+    }
+
+
+    // @include respond(tab-land){
+    //     padding: 1.35rem 4rem;            
+    // } 
+}

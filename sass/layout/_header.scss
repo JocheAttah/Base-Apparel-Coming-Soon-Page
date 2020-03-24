@@ -1,0 +1,139 @@
+.header{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    
+    
+
+
+
+    &__gradient{
+        height: 100vh;
+        width: 60vw;
+        float: left;
+        background-image: url(/images/bg-pattern-desktop.svg);
+        background-size: cover;
+        position: absolute;
+
+        @include respond(tab-port){
+            height: 74vh;
+            width: 100vw;
+            position: absolute;
+            top: 66rem;
+            left: 0;
+        }
+
+        @include respond(phone){
+            top: 50rem;
+        }
+
+        @include respond(small-phone){
+            top: 44rem;
+        }
+
+
+    }
+
+    &__hero{
+        height: 100vh;
+        width: 40vw;
+        float: right;
+        background-image: url(/images/hero-desktop.jpg);
+        background-size: cover;
+
+        @include respond(tab-port){
+            height: 40vh;
+            width: 100vw;
+            background-image: url(/images/hero-mobile.jpg) ;
+            background-size: cover;
+            position: absolute;
+            top: 10rem;
+            left: 0;
+
+        }
+
+
+
+    }
+
+    &__logo-box{
+        position: absolute;
+        top: 8rem;
+        left: 16rem;
+        
+        @include respond(tab-land){
+            left: 12rem;
+        }
+        
+        @include respond(tab-port){
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $gradient-white;
+            height: 10vh;
+            width: 100%;
+            padding-bottom: 10rem;
+        }
+    }
+
+    &__logo{
+        height: 5rem;
+
+        @include respond(tab-port){
+            height: 6rem;
+            position: absolute;
+            top: 2rem;
+            left: 10rem;
+            padding: 1rem;
+            font-size: 5rem;
+        }
+        
+        @include respond(small-phone) {
+            left: 4rem;   
+        }
+        // @include respond(big-desktop){
+        //     height: 7rem;
+        // }
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 26rem;
+        left: 16rem;
+        text-align: left;
+        
+        @include respond(tab-land){
+            left: 12rem;
+        }
+        
+        @include respond(tab-port){
+            left: 12rem;
+            top: 12rem;
+            width: 77%;
+            text-align: center;
+        }
+
+        @include respond(phone){
+            top: 10rem;
+            width: auto;
+            text-align: center;
+        }
+
+        @include respond(small-phone) {
+            top: 12rem;
+            left: 4rem;  
+            text-align: center;
+            width: auto; 
+        }
+
+        // @include respond(big-desktop){
+        //     width: auto;
+        // }
+        
+
+
+
+
+    }
+
+}
